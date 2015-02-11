@@ -4,9 +4,22 @@
 
 <table class="table table-bordered">
   <thead>
-
+    <tr>
+          <% @people.first.keys.each do |attribute_name| %>
+            <td><%= attribute_name %></td>
+          <% end %>
+    </tr>
   </thead>
   <tbody>
+      <% @people.each do |attribute_value| %>
+        <tr>
+          <td><%= attribute_value[:first_name] %></td>
+          <td><%= attribute_value[:last_name] %></td>
+          <td><%= attribute_value[:date_of_birth] %></td>
+          <td><%= attribute_value[:eye_color] %></td>
+          <td><%= attribute_value[:telephone_number] %></td>
+        </tr>
 
+      <% end %>
   </tbody>
 </table>

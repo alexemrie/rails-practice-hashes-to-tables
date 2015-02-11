@@ -8,6 +8,7 @@ class PeopleController < ApplicationController
         date_of_birth: (20.years.ago.to_date..4.years.ago.to_date),
         eye_color: %w(brown blue hazel green).sample,
         telephone_number: Faker::PhoneNumber.phone_number
+        
       }
     end
   end
